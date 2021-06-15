@@ -13,6 +13,10 @@
   --weight-regular: 400px;
 
   /* Color */
+  --color-black: #212121;
+  --color-grey-dark: #424242;
+  --color-grey: #616161;
+  --color-grey-light: #8e8e8e;
   --color-navbar: #ff7043;
 
   /* Margin */
@@ -79,4 +83,34 @@ a:link {
 
 .on-scrollbar::-webkit-scrollbar-track {
   background-color: #efefef;
+}
+
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
 }
