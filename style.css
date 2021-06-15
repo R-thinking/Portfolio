@@ -1,0 +1,82 @@
+/* Global */
+:root {
+  /* Font size */
+  --font-large: 45px;
+  --font-medium: 26px;
+  --font-regular: 17px;
+  --font-small: 14px;
+  --font-micro: 12px;
+
+  /* Font weight */
+  --weight-bold: 700px;
+  --weight-semi-bold: 600px;
+  --weight-regular: 400px;
+
+  /* Color */
+  --color-navbar: #ff7043;
+
+  /* Margin */
+  --margin-large: 55px;
+  --margin-medium: 35px;
+  --margin-regular: 24px;
+  --margin-small: 10px;
+  --margin-micro: 5px;
+
+  /* Padding */
+  --padding-small: 5px;
+  --padding-normal: 10px;
+  --padding-large: 14px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Element Set-up */
+
+/* ul */
+ul {
+  list-style: none;
+}
+
+/* button */
+button,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* a tag */
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.on-scrollbar::-webkit-scrollbar:vertical,
+::-webkit-scrollbar:hover {
+  display: block;
+  width: 16px;
+}
+
+.on-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 8px;
+}
+.on-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #8d8d8d;
+}
+
+.on-scrollbar::-webkit-scrollbar-track {
+  background-color: #efefef;
+}
