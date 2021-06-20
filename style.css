@@ -2,15 +2,18 @@
 :root {
   /* Font size */
   --font-large: 48px;
-  --font-medium: 36px;
-  --font-regular: 24px;
-  --font-small: 16px;
+  --font-semi-large: 32px;
+  --font-medium: 24px;
+  --font-regular: 18px;
+  --font-small: 14px;
   --font-micro: 12px;
 
   /* Font weight */
+  --weight-bolder: 900;
   --weight-bold: 700;
-  --weight-semi-bold: 600;
+  --weight-semi-bold: 500;
   --weight-regular: 400;
+  --weight-small: 300;
 
   /* Color */
   --color-black: #212121;
@@ -19,8 +22,11 @@
   --color-grey: #616161;
   --color-grey-light: #8e8e8e;
   --color-navbar: #ff7043;
-  --color-navbar-hover: #c63f17;
+  --color-navbar-hover: #e64a19;
   --color-contact-hover: #ffb74d;
+  --color-light-yellow: #ffcc80;
+  --color-dark-yellow: #ca9b52;
+  --color-major-hover: #ff5722;
 
   /* Margin */
   --margin-small: 4px;
@@ -32,11 +38,16 @@
   --padding-regular: 4px;
   --padding-medium: 8px;
   --padding-large: 16px;
+  --padding-section: 50px;
 
   /* Size */
   --size-logo: 35px;
   --size-border-radius: 4px;
-  --size-avatar: 290px;
+  --size-avatar: 320px;
+  --size-icon: 80px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -46,7 +57,7 @@
   margin: var(--margin-small) var(--margin-regular);
 }
 
-/* Element Set-up */
+/* Element Common Set-up */
 
 /* html */
 html {
@@ -63,11 +74,23 @@ body {
   cursor: default;
 }
 
-/* Section */
-nav,
+/* section */
 section {
   margin: 0;
-  padding: 0;
+  padding: var(--margin-large) var(--padding-section);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* nav */
+nav {
+  margin: 0;
+  padding: 0 var(--padding-section);
 }
 
 /* ul */
@@ -96,7 +119,7 @@ a:link {
   text-decoration: none;
 }
 
-/* Scrollbar */
+/* scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -158,6 +181,7 @@ p {
   background-color: var(--color-navbar);
   color: var(--color-white);
   font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
 }
 
 /* Navbar Logo */
@@ -186,12 +210,14 @@ p {
 .navbar__menu__item {
   font-size: var(--font-small);
   padding: var(--padding-medium);
-  padding-top: var(--padding-regular);
+  /* padding-top: var(--padding-regular); */
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
   border: 2px solid var(--color-white);
+  background-color: var(--color-navbar-hover);
+  padding: 6px;
 }
 
 .navbar__menu__item:hover {
@@ -203,7 +229,6 @@ p {
   background: url("/imgs/home-background.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   color: var(--color-white);
   padding: var(--margin-large) 0;
@@ -223,13 +248,70 @@ img.home__avatar {
   font-weight: var(--weight-bold);
 }
 
+.home__description,
+.home__contact {
+  font-size: var(--font-semi-large);
+}
+
 button.home__contact {
   padding: var(--padding-medium);
-  font-size: var(--font-regular);
+  margin-top: var(--margin-medium);
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
 
 button.home__contact:hover {
   background-color: var(--color-contact-hover);
+}
+
+/* About */
+#about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about__title {
+  font-weight: var(--weight-bolder);
+}
+
+.about__description {
+}
+
+.about__majors {
+  margin-top: var(--margin-large);
+  display: flex;
+  justify-content: space-between;
+}
+
+.major__icon {
+  font-size: var(--size-icon);
+  height: 160px;
+  width: 160px;
+  line-height: 160px;
+  margin: auto;
+  color: var(--color-light-yellow);
+  border: 1px solid var(--color-light-yellow);
+  border-radius: 50%;
+  margin-bottom: var(--margin-medium);
+}
+
+.major__icon:hover i {
+  color: var(--color-major-hover);
+  transform: translateY(-5px) scale(1.2);
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__title {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-grey-dark);
+}
+
+.major__description {
+  font-size: var(--font-small);
+  color: var(--color-grey-dark);
 }
