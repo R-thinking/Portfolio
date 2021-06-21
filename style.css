@@ -27,12 +27,15 @@
   --color-light-yellow: #ffcc80;
   --color-dark-yellow: #ca9b52;
   --color-major-hover: #ff5722;
+  --color-skills-background: #72d2f2;
+  --color-bar-value: #fbc02d;
 
   /* Margin */
   --margin-small: 4px;
   --margin-regular: 8px;
   --margin-medium: 24px;
   --margin-large: 72px;
+  --margin-section: 100px;
 
   /* Padding */
   --padding-regular: 4px;
@@ -41,7 +44,7 @@
   --padding-section: 50px;
 
   /* Size */
-  --size-logo: 35px;
+  --size-logo: 24px;
   --size-border-radius: 4px;
   --size-avatar: 320px;
   --size-icon: 80px;
@@ -82,7 +85,8 @@ section {
   text-align: center;
 }
 
-.section {
+.section,
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -90,7 +94,8 @@ section {
 /* nav */
 nav {
   margin: 0;
-  padding: 0 var(--padding-section);
+  padding: var(--padding-regular) var(--padding-large);
+  padding-left: var(--padding-section);
 }
 
 /* ul */
@@ -180,7 +185,7 @@ p {
   align-items: center;
   background-color: var(--color-navbar);
   color: var(--color-white);
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
 
@@ -189,35 +194,34 @@ p {
   display: flex;
 }
 
-.navbar__logo img {
-  margin-right: 2px;
-  width: var(--size-logo);
-  height: var(--size-logo);
+.navbar__logo i {
+  margin: auto 0;
+  padding-right: var(--padding-medium);
+  font-size: var(--size-logo);
 }
 
 .navbar__logo a {
   margin-left: 0;
-  margin-top: 1px;
   color: var(--color-white);
 }
 
 /* Navbar Menu */
 .navbar__menu {
+  margin: 0;
   display: flex;
   cursor: pointer;
 }
 
 .navbar__menu__item {
-  font-size: var(--font-small);
-  padding: var(--padding-medium);
-  /* padding-top: var(--padding-regular); */
+  font-size: var(--font-regular);
+  padding: var(--padding-medium) var(--padding-large);
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
   border: 2px solid var(--color-white);
   background-color: var(--color-navbar-hover);
-  padding: 6px;
+  padding: 6px 14px;
 }
 
 .navbar__menu__item:hover {
@@ -227,9 +231,6 @@ p {
 /* Home */
 #home {
   background: url("/imgs/home-background.png") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: var(--color-white);
   padding: var(--margin-large) 0;
 }
@@ -265,17 +266,8 @@ button.home__contact:hover {
 }
 
 /* About */
-#about {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .about__title {
   font-weight: var(--weight-bolder);
-}
-
-.about__description {
 }
 
 .about__majors {
@@ -314,4 +306,91 @@ button.home__contact:hover {
 .major__description {
   font-size: var(--font-small);
   color: var(--color-grey-dark);
+}
+
+/* Skills */
+#skills {
+  margin-top: var(--margin-large);
+  padding-bottom: var(--margin-section);
+  background-color: var(--color-skills-background);
+  color: var(--color-white);
+  font-size: var(--font-regular);
+}
+
+.skills__description {
+  margin: auto var(--margin-large);
+}
+
+.skillset {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: var(--padding-section) 0;
+}
+
+.skillset__left {
+  margin: 0;
+  padding: var(--padding-section);
+  flex: 1 1 65%;
+  background-color: var(--color-grey-dark);
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--margin-medium);
+}
+
+.skill__description {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--margin-regular);
+}
+.skill__description span {
+  margin: 0;
+  padding: 0;
+}
+
+.skill__bar {
+  margin: 0;
+  padding: 1.5px 0;
+  width: 100%;
+  background-color: var(--color-grey-light);
+  position: relative;
+}
+
+.bar__value {
+  margin: 0;
+  padding: 1.5px 0;
+  background-color: var(--color-bar-value);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.skillset__right {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 35%;
+}
+
+.skillset__title {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+}
+
+.skillset__right .tools {
+  margin: 0;
+  padding: var(--padding-large);
+  background-color: var(--color-grey);
+  height: 60%;
+}
+
+.skillset__right .etc {
+  margin: 0;
+  padding: var(--padding-large);
+  height: 40%;
+  background-color: var(--color-grey-light);
 }
