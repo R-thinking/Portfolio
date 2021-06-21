@@ -52,6 +52,7 @@
   --size-border-radius: 4px;
   --size-avatar: 320px;
   --size-icon: 80px;
+  --size-contact-link: 40px;
 
   /* Animation */
   --animation-duration: 300ms;
@@ -569,4 +570,33 @@ button.home__contact:hover {
 
 .project__description span {
   height: 40%;
+}
+
+/* Contact */
+#contact {
+  margin: 0;
+  margin-top: var(--margin-section);
+  padding: var(--padding-large);
+  background-color: var(--color-navbar);
+}
+#contact * {
+  color: var(--color-white);
+}
+
+.contact__email {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.contact__links a {
+  padding: 0;
+  margin: 0;
+}
+
+.contact__links i {
+  font-size: var(--size-contact-link);
+}
+
+.contact__copyright {
+  color: var(--color-white-dark);
 }
