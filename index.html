@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R-thinking's Portfolio</title>
     <meta name="author" content="R-thinking">
-    <link rel="icon" type="image/svg" href="imgs/favicon.svg"/>
+    <link rel="icon" type="image/svg" href="imgs/favicon.svg" />
 
     <!-- Google Font -->
-    <link 
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" 
-        rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"
+        rel="stylesheet" />
     <!-- Font Awesome -->
-    <script 
-        src="https://kit.fontawesome.com/caef5e6289.js" 
-        crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/caef5e6289.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Javascript -->
     <script src="src/main.js" defer></script>
 
 </head>
+
 <body>
     <!-- Navbar -->
     <nav id="navbar">
@@ -38,26 +35,24 @@
             <li class="navbar__menu__item">My Work</li>
             <li class="navbar__menu__item">Contact</li>
         </ul>
+        <button class="navbar__toggleBtn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
     <!-- Home -->
     <section id="home">
-        <img 
-            src="imgs/Profile.jpg" 
-            alt="R-thinking's profile photo" 
-            class="home__avatar"
-        />
-        <h1 class="home__title">Hello World,<br/> I'm R-thinking </h1>
+        <img src="imgs/Profile.jpg" alt="R-thinking's profile photo" class="home__avatar" />
+        <h1 class="home__title">Hello World,<br /> I'm R-thinking </h1>
         <h2 class="home__description">A developer dreaming of making righteous world through right thiking<h2>
-        <button class="home__contact">Contact Me</button>
-        
+                <button class="home__contact">Contact Me</button>
     </section>
     <!-- About -->
-    <section id="about" class="section" >
+    <section id="about" class="section">
         <h1 class="about__title">About Me</h1>
         <h2 class="about__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed gravida lectus, 
-            in lobortis nunc. Mauris orci ex, ullamcorper quis efficitur vitae, porta nec mauris. 
-            Sed ac consequat odio. Orci varius natoque penatibus et magnis dis parturient montes, 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed gravida lectus,
+            in lobortis nunc. Mauris orci ex, ullamcorper quis efficitur vitae, porta nec mauris.
+            Sed ac consequat odio. Orci varius natoque penatibus et magnis dis parturient montes,
             nascetur ridiculus mus. Maecenas viverra in sapien ac semper.
         </h2>
         <div class="about__majors">
@@ -75,7 +70,7 @@
                     <i class="fas fa-server"></i>
                 </div>
                 <div class="major__title">Back-end</div>
-                <div class="major__description">Javascript, Node.js, SQL,<br/> NOSQL</div>
+                <div class="major__description">Javascript, Node.js, SQL,<br /> NOSQL</div>
             </div>
             <!-- Framework -->
             <div class="major">
@@ -92,9 +87,9 @@
         <div class="section__container">
             <h1 class="skills__title">Skills</h1>
             <h2 class="skills__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed gravida lectus, 
-                in lobortis nunc. Mauris orci ex, ullamcorper quis efficitur vitae, porta nec mauris. 
-                Sed ac consequat odio. Orci varius natoque penatibus et magnis dis parturient montes, 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed gravida lectus,
+                in lobortis nunc. Mauris orci ex, ullamcorper quis efficitur vitae, porta nec mauris.
+                Sed ac consequat odio. Orci varius natoque penatibus et magnis dis parturient montes,
                 nascetur ridiculus mus. Maecenas viverra in sapien ac semper.
             </h2>
             <div class="skillset">
@@ -185,103 +180,63 @@
             <button class="category__btn">Framework <span class="category__count">2</span></button>
         </div>
         <div class="work__projects">
-            <a 
-                href="https://github.com/R-thinking/Youtube_Clone" 
-                class="project"
-                target="_blank"
-                data-type="front-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-frontend1.png" alt="">
-            <div class="project__description">
-                <h3>Youtube Clone Site</h3>
-                <span>Clone coding with html & CSS</span>
-            </div>
+            <a href="https://github.com/R-thinking/Youtube_Clone" class="project" target="_blank" data-type="front-end">
+                <img class="project__img" src="imgs/projects/project-frontend1.png" alt="">
+                <div class="project__description">
+                    <h3>Youtube Clone Site</h3>
+                    <span>Clone coding with html & CSS</span>
+                </div>
             </a>
-            <a 
-                href="https://github.com/R-thinking/ShoppingJs" 
-                class="project"
-                target="_blank"
-                data-type="front-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-frontend2.png" alt="">
-            <div class="project__description">
-                <h3>Shopping Mall Site</h3>
-                <span>Shopping mall coding for javascript practice. 
-                    <br/>A navbar, menubar, animations, filtering function, etc are made with vanilla javascript. 
-                </span>
-            </div>
+            <a href="https://github.com/R-thinking/ShoppingJs" class="project" target="_blank" data-type="front-end">
+                <img class="project__img" src="imgs/projects/project-frontend2.png" alt="">
+                <div class="project__description">
+                    <h3>Shopping Mall Site</h3>
+                    <span>Shopping mall coding for javascript practice.
+                        <br />A navbar, menubar, animations, filtering function, etc are made with vanilla javascript.
+                    </span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="front-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual1.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="front-end">
+                <img class="project__img" src="imgs/projects/project-virtual1.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="front-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual2.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="front-end">
+                <img class="project__img" src="imgs/projects/project-virtual2.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="back-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual3.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="back-end">
+                <img class="project__img" src="imgs/projects/project-virtual3.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="back-end"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual4.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="back-end">
+                <img class="project__img" src="imgs/projects/project-virtual4.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="framework"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual5.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="framework">
+                <img class="project__img" src="imgs/projects/project-virtual5.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
-            <a 
-                href="" 
-                class="project"
-                target="_blank"
-                data-type="framework"    
-            >
-            <img class="project__img" src="imgs/projects/project-virtual6.png" alt="">
-            <div class="project__description">
-                <h3>Virtual project</h3>
-                <span>It has no project yet</span>
-            </div>
+            <a href="" class="project" target="_blank" data-type="framework">
+                <img class="project__img" src="imgs/projects/project-virtual6.png" alt="">
+                <div class="project__description">
+                    <h3>Virtual project</h3>
+                    <span>It has no project yet</span>
+                </div>
             </a>
         </div>
     </section>
@@ -292,14 +247,15 @@
             <h3 class="contact__email">making.r.w@gmail.com</h3>
             <div class="contact__links">
                 <a href="https://github.com/R-thinking" target="_blank">
-                        <i class="fab fa-github"></i>
+                    <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/hojun-ji-403494214/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-linkedin"></i>
                 </a>
             </div>
             <p class="contact__copyright">R-thinking - All rights reserved</p>
         </div>
     </section>
 </body>
+
 </html>
