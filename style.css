@@ -346,8 +346,12 @@ p {
   background: url("/imgs/home-background.png") center/cover no-repeat;
   color: var(--color-white);
   padding: var(--margin-section) 0;
+  padding-bottom: var(--margin-large);
 }
-
+.home__container {
+  margin: 0;
+  padding: 0;
+}
 /* Home Avatar */
 img.home__avatar {
   width: var(--size-avatar);

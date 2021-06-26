@@ -5,9 +5,10 @@ let timer = 0;
 
 // Main
 {
+    window.addEventListener('scroll', () => handleScroll(), true);
     scrollToSection();
     displayNavbar();
-    window.addEventListener('scroll', () => handleScroll(), true);
+    fadeOutHome();
 }
 
 // Function Declaration
@@ -74,5 +75,14 @@ function scrollToSection() {
             scrollTo.scrollIntoView(scrollIntoViewOptions);
         }
     }
+}
+
+function fadeOutHome(){
+    const home = document.querySelector('.home__container');
+    const homeHeight = home.getBoundingClientRect().height;
+    document.addEventListener('scroll',()=> {
+        const scrY = window.scrollY;
+        home.style.opacity = 1 - scrY/homeHeight;
+    });
 }
 
