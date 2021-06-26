@@ -9,6 +9,7 @@ let timer = 0;
     scrollToSection();
     displayNavbar();
     fadeOutHome();
+    homeLink();
 }
 
 // Function Declaration
@@ -21,7 +22,9 @@ function handleScroll() {
     }
     else if (body.classList.contains("on-scrollbar") === true) {
         clearTimeout(timer);
-        timer = setTimeout(()=>body.classList.remove('on-scrollbar'),1800);
+        timer = setTimeout(()=>{
+            body.classList.remove('on-scrollbar')
+        },1800);
     }
 }
 
@@ -77,6 +80,7 @@ function scrollToSection() {
     }
 }
 
+// Make contents in home container fade out according to scrolling.
 function fadeOutHome(){
     const home = document.querySelector('.home__container');
     const homeHeight = home.getBoundingClientRect().height;
@@ -86,3 +90,34 @@ function fadeOutHome(){
     });
 }
 
+// Make a button to make a move to home.
+function homeLink() {
+    const homeLink = document.querySelector('.home__link');
+    const navbar = document.querySelector('#navbar');
+    const navbarHeight = navbar.getBoundingClientRect().height;
+    const home = document.querySelector('#home');
+    const scrollIntoViewOptions = {
+        behavior: "smooth"
+        ,block: "start"
+        ,inline: "start"
+    }
+
+    // Display home link button.
+    document.addEventListener('scroll',() =>{
+        if(window.scrollY>navbarHeight){
+            if(!(homeLink.classList.contains('active'))){
+                homeLink.classList.add('active');
+            }
+        }
+        else {
+            if((homeLink.classList.contains('active'))){
+                homeLink.classList.remove('active');
+            }
+        }
+    });
+
+    // Scroll to home when button is clicked.
+    homeLink.addEventListener('click',() => {
+        home.scrollIntoView(scrollIntoViewOptions);
+    });
+}

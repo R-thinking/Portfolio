@@ -57,7 +57,8 @@
   --size-icon: 80px;
   --size-contact-link: 40px;
   --size-contact-link-mobile: 30px;
-
+  --size-home-link: 65px;
+  --size-home-link-mobile: 30px;
   /* Animation */
   --animation-duration: 300ms;
   --fadeIn-duration: 500ms;
@@ -384,6 +385,26 @@ button.home__contact {
 
 button.home__contact:hover {
   background-color: var(--color-contact-hover);
+}
+
+.home__link {
+  position: fixed;
+  z-index: 2;
+  color: var(--color-white);
+  font-size: var(--size-home-link);
+  background-color: var(--color-navbar);
+  border-radius: 50%;
+  right: 40px;
+  bottom: 50px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home__link.active {
+  visibility: visible;
+  pointer-events: auto;
+  background-color: var(--color-navbar);
+  animation: Up var(--animation-duration) ease;
 }
 
 /* About */
@@ -886,6 +907,12 @@ button.home__contact:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .home__link {
+    font-size: var(--size-home-link-mobile);
+    right: 15px;
+    bottom: 20px;
+  }
+
   /* Work */
   .work__categories {
     min-width: 325px;
