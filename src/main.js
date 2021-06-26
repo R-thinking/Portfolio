@@ -42,10 +42,19 @@ function displayNavbar() {
     }
 }
 
-
+// Scroll to target sections when tapping on the navbar menu.
 function scrollToSection() {
+    // Local Variables
     const navbarBtn = document.querySelector('.navbar__menu');
-    navbarBtn.addEventListener('click',event => {
+    const contactBtn = document.querySelector('.home__contact');
+
+    // Eventlisteners
+    navbarBtn.addEventListener('click',e =>onclick(e)); 
+    contactBtn.addEventListener('click',e =>onclick(e));
+
+    // Local functions.
+    // scrolling onclick function.
+    function onclick(event){
         const dataset =event.target.dataset;
         const link = dataset.link;
         // const winY = window.pageYOffset;
@@ -64,6 +73,6 @@ function scrollToSection() {
             // window.scrollTo(0, winY + targetTop);
             scrollTo.scrollIntoView(scrollIntoViewOptions);
         }
-    });
+    }
 }
 
