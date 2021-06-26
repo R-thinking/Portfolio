@@ -10,6 +10,7 @@ let timer = 0;
     displayNavbar();
     fadeOutHome();
     homeLink();
+    filterProjects();
 }
 
 // Function Declaration
@@ -119,5 +120,35 @@ function homeLink() {
     // Scroll to home when button is clicked.
     homeLink.addEventListener('click',() => {
         home.scrollIntoView(scrollIntoViewOptions);
+    });
+}
+
+function filterProjects() {
+    const categoryBtn = document.querySelector('.work__categories');
+    const container = document.querySelector('.work__projects');
+    const projects = document.querySelectorAll('.project');
+    
+    categoryBtn.addEventListener('click',(event) =>{
+        const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+        if(filter==null){
+            return 0;
+        }
+        else {
+            container.classList.add('fadeOut');
+            setTimeout(() =>{
+                projects.forEach((project) => {
+                    if(filter==="all" || filter === project.dataset.type){
+                        project.classList.add('invisible');
+                        setTimeout(() => {
+                            project.classList.remove('invisible');
+                        },20);
+                    }
+                    else {
+                        project.classList.add('invisible');
+                    }
+                });
+                container.classList.remove('fadeOut');
+            }, 450);
+        }
     });
 }

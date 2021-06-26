@@ -549,6 +549,7 @@ button.home__contact:hover {
   padding: var(--padding-section) 0;
   padding-top: var(--padding-medium);
   margin-top: var(--margin-large);
+  min-height: 790px;
 }
 
 .work__subtitle {
@@ -614,6 +615,21 @@ button.home__contact:hover {
   flex-wrap: wrap;
 }
 
+.work__projects.fadeOut {
+  animation: fadeOutRight var(--fadeIn-duration) ease;
+}
+
+@keyframes fadeOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
 .project {
   width: 294px;
   height: 250px;
@@ -623,6 +639,27 @@ button.home__contact:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  visibility: visible;
+  animation: fadeInRight var(--animation-duration) ease-in;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project.fadeOut {
+  animation: fadeOutRight var(--fadeIn-duration) ease-out;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
