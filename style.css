@@ -118,6 +118,10 @@ ul {
   list-style: none;
 }
 
+li {
+  margin: 0;
+}
+
 /* img */
 img {
   margin: 0;
@@ -308,6 +312,8 @@ p {
   font-size: var(--font-regular);
   padding: var(--padding-medium) var(--padding-large);
   border-radius: var(--size-border-radius);
+  color: var(--color-white);
+  font-weight: var(--weight-semi-bold);
 }
 
 .navbar__menu__item.active {

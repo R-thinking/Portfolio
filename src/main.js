@@ -5,6 +5,7 @@ let timer = 0;
 
 // Main
 {
+    scrollToSection();
     displayNavbar();
     window.addEventListener('scroll', () => handleScroll(), true);
 }
@@ -42,5 +43,27 @@ function displayNavbar() {
 }
 
 
-
+function scrollToSection() {
+    const navbarBtn = document.querySelector('.navbar__menu');
+    navbarBtn.addEventListener('click',event => {
+        const dataset =event.target.dataset;
+        const link = dataset.link;
+        // const winY = window.pageYOffset;
+        if(link==null){
+            return;
+        }
+        else {
+            const scrollTo = document.querySelector(link);
+            const scrollIntoViewOptions = {
+                behavior: "smooth"
+                ,block: "start"
+                ,inline: "start"
+            }
+            // const target = document.querySelector(link);
+            // const targetTop =target.getBoundingClientRect().top;
+            // window.scrollTo(0, winY + targetTop);
+            scrollTo.scrollIntoView(scrollIntoViewOptions);
+        }
+    });
+}
 
