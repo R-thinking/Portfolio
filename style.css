@@ -315,15 +315,18 @@ p {
   border-radius: var(--size-border-radius);
   color: var(--color-white);
   font-weight: var(--weight-semi-bold);
+  border: 2px solid transparent;
 }
 
 .navbar__menu__item.active {
   border: 2px solid var(--color-white);
   background-color: var(--color-navbar-hover);
-  padding: 6px 14px;
+  /* padding: 6px 14px; */
 }
 
 .navbar__menu__item:hover {
+  border: 2px solid var(--color-white);
+  /* padding: 6px 14px; */
   background-color: var(--color-navbar-hover);
 }
 

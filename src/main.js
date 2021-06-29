@@ -7,10 +7,12 @@ let timer = 0;
 {
     window.addEventListener('scroll', () => handleScroll(), true);
     scrollToSection();
+    handleBtn();
     displayNavbar();
     fadeOutHome();
     homeLink();
     filterProjects();
+
 }
 
 // Function Declaration
@@ -151,4 +153,40 @@ function filterProjects() {
             }, 450);
         }
     });
+}
+
+function handleBtn(){
+    // Local variables
+    const navbarMenu =document.querySelector('.navbar__menu');
+    const category = document.querySelector('.work__categories');
+
+    // Listener
+    navbarMenu.addEventListener('click',e => onclick1(e));
+    category.addEventListener('click',e => onclick2(e));
+    
+    // Local functions
+
+    // onclick function when clicking on navbar menu.
+    function onclick1(event) {
+        const selected = document.querySelector('.navbar__menu__item.active');
+        if(event.target.className != 'navbar__menu__item'){
+            return;
+        }
+        event.target.classList.add('active');
+        if(selected === null){return;}
+        selected.classList.remove('active'); 
+    }
+
+    // onclick function when clicking on work category button.
+    function onclick2(event) {
+        const selected = document.querySelector('.category__btn.active');
+        const active = 
+        event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+        if(active.className != 'category__btn'){
+            return;
+        }
+        active.classList.add('active');
+        if(selected ===null){return;}
+        selected.classList.remove('active');
+    }
 }
