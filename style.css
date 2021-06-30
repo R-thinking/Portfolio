@@ -106,7 +106,7 @@ section {
 /* nav */
 nav {
   margin: 0;
-  padding: var(--padding-regular) var(--padding-large);
+  padding: var(--padding-regular) var(--padding-medium);
   padding-left: var(--padding-section);
 }
 
@@ -274,13 +274,14 @@ p {
   color: var(--color-white);
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  padding-left: var(--margin-medium);
 }
 
 #navbar.navbar--display {
   background-color: var(--color-navbar);
   opacity: 0.9;
   padding-right: var(--padding-regular);
-  padding-left: var(--padding-large);
+  padding-left: var(--padding-medium);
   animation: navInOut__1 var(--animation-duration) ease-in-out;
 }
 
@@ -343,6 +344,36 @@ p {
 
 .navbar__toggleBtn i {
   margin: 0;
+}
+
+.screen__fence {
+  background-color: var(--color-black);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0.7;
+  display: none;
+}
+
+.screen__fence.display {
+  display: block;
+  animation: screenFence var(--fadeIn-duration) ease-in-out;
+}
+
+@keyframes screenFence {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
 }
 
 /* Home */
@@ -696,8 +727,8 @@ button.home__contact:hover {
 }
 
 .project__description h3 {
-  color: var(--color-white);
-  font-size: var(--font-small);
+  color: var(--color-bar-value);
+  font-size: var(--font-regular);
   position: relative;
   top: 100px;
   width: 100%;
@@ -798,13 +829,12 @@ button.home__contact:hover {
 
   /* Navbar */
   #navbar {
+    z-index: 4;
+    background-color: var(--color-navbar);
     padding: var(--padding-medium) var(--padding-regular);
+    padding-left: var(--padding-large);
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  #navbar.navbar--display {
-    animation: navInOut__2 var(--animation-duration) ease-in-out;
   }
 
   #navbar i {
@@ -818,6 +848,7 @@ button.home__contact:hover {
   .navbar__logo a {
     font-size: var(--font-regular);
   }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -825,8 +856,27 @@ button.home__contact:hover {
     display: none;
   }
 
-  .navbar__menu__item.active {
-    border: unset;
+  .navbar__menu.display {
+    display: flex;
+    animation: Up2 var(--fadeIn-duration) ease-in-out;
+  }
+
+  @keyframes Up2 {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+    to {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar__menu__item.active,
+  .navbar__menu__item:hover {
+    /* border: unset; */
+    width: 80%;
   }
 
   .navbar__toggleBtn {

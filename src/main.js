@@ -12,6 +12,7 @@ let timer = 0;
     fadeOutHome();
     homeLink();
     filterProjects();
+    toggleNavbarMenu();
 
 }
 
@@ -40,6 +41,12 @@ function displayNavbar() {
     document.addEventListener('scroll',onscroll,{passive:true});
     function onscroll() {
             const clientHeight = window.scrollY;
+            const clientWidth = document.body.clientWidth;
+            
+            if(clientWidth<= 768){
+                return;
+            }
+
             if(clientHeight>navbarHeight){
                 navbar.classList.add('navbar--display');
             }
@@ -169,12 +176,20 @@ function handleBtn(){
     // onclick function when clicking on navbar menu.
     function onclick1(event) {
         const selected = document.querySelector('.navbar__menu__item.active');
+        const clientWidth = document.body.clientWidth;
+        const screenFence = document.querySelector('.screen__fence');
+
         if(event.target.className != 'navbar__menu__item'){
             return;
         }
         event.target.classList.add('active');
+
         if(selected === null){return;}
         selected.classList.remove('active'); 
+
+        if(clientWidth>768){return;}
+        navbarMenu.classList.remove('display');
+        screenFence.classList.remove('display');
     }
 
     // onclick function when clicking on work category button.
@@ -182,11 +197,34 @@ function handleBtn(){
         const selected = document.querySelector('.category__btn.active');
         const active = 
         event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+        
         if(active.className != 'category__btn'){
             return;
         }
         active.classList.add('active');
+
         if(selected ===null){return;}
         selected.classList.remove('active');
+    }
+}
+
+
+function toggleNavbarMenu() {
+    const toggleBtn = document.querySelector('.navbar__toggleBtn');
+    const navMenu = document.querySelector('.navbar__menu');
+    const screenFence = document.querySelector('.screen__fence');
+
+    toggleBtn.addEventListener('click',ontoggle);
+
+    function ontoggle(){
+        navMenu.classList.toggle('display');
+        
+        if(!(navMenu.classList.contains('display'))){
+            screenFence.classList.remove('display');
+        }
+        else {
+            screenFence.classList.add('display');
+        }
+        return;
     }
 }
