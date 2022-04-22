@@ -378,7 +378,7 @@ p {
 
 /* Home */
 #home {
-  background: url("/imgs/home-background.png") center/cover no-repeat;
+  background: url("./imgs/home-background.png") center/cover no-repeat;
   color: var(--color-white);
   padding: var(--margin-section) 0;
   padding-bottom: var(--margin-large);
