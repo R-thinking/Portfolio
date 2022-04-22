@@ -584,6 +584,7 @@ button.home__contact:hover {
   padding-top: var(--padding-medium);
   margin-top: var(--margin-large);
   min-height: 790px;
+  width: 100vw;
 }
 
 .work__subtitle {
@@ -641,8 +642,9 @@ button.home__contact:hover {
 
 /* Work Projects */
 .work__projects {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 900px;
   margin-top: var(--margin-medium);
   display: flex;
   justify-content: center;
@@ -738,7 +740,7 @@ button.home__contact:hover {
   content: "";
   display: block;
   height: 1.5px;
-  width: 60px;
+  width: 55px;
   background-color: var(--color-white-dark);
   position: absolute;
   left: 0;
@@ -749,7 +751,7 @@ button.home__contact:hover {
   content: "";
   display: block;
   height: 1.5px;
-  width: 60px;
+  width: 55px;
   background-color: var(--color-white-dark);
   position: absolute;
   right: 0;
@@ -967,7 +969,7 @@ button.home__contact:hover {
   }
 
   button.category__btn {
-    padding: var(--padding-medium) var(--padding-medium);
+    padding: var(--padding-medium) var(--padding-large);
   }
 
   .category__count {
@@ -1004,14 +1006,21 @@ button.home__contact:hover {
   }
 
   /* Work */
+  .work__projects {
+    margin-top: var(--margin-regular);
+  }
+
   .work__categories {
+    margin: var(--margin-medium) auto;
     min-width: 325px;
+    flex-direction: column;
   }
+
   button.category__btn {
-    font-size: var(--font-micro);
-    font-weight: var(weight-bolder);
-    padding: var(--padding-medium) var(--padding-regular);
+    width: 220px;
+    margin: var(--margin-micro) auto;
   }
+
   .project {
     width: 80%;
     max-width: 350px;
