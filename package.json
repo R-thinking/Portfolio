@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/R-thinking/Portfolio.git"
   },
-  "author": "",
+  "author": {
+    "name": "R-thinking",
+    "email": "making.r.w@gmail.com",
+    "url": "https://github.com/R-thinking"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/R-thinking/Portfolio/issues"
