@@ -1,264 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R-thinking's Portfolio</title>
-    <meta name="author" content="R-thinking">
+    <meta name="author" content="R-thinking" />
     <link rel="icon" type="image/svg" href="imgs/favicon.svg" />
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/caef5e6289.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/caef5e6289.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Javascript -->
     <script src="./src/main.js" defer></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <i class="fas fa-dice-d6"></i>
-            <a href="#">R-thinking</a>
-        </div>
-        <ul class="navbar__menu">
-            <li><button class="navbar__menu__item" data-link="#home">Home</button></li>
-            <li><button class="navbar__menu__item" data-link="#about">About</button></li>
-            <li><button class="navbar__menu__item" data-link="#skills">Skills</button></li>
-            <li><button class="navbar__menu__item" data-link="#work">My Work</button></li>
-            <li><button class="navbar__menu__item" data-link="#contact">Contact</button></li>
-        </ul>
-        <button class="navbar__toggleBtn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <div class="navbar__logo">
+        <i class="fas fa-dice-d6"></i>
+        <a href="#">R-thinking</a>
+      </div>
+      <ul class="navbar__menu">
+        <li>
+          <button class="navbar__menu__item" data-link="#home">Home</button>
+        </li>
+        <li>
+          <button class="navbar__menu__item" data-link="#about">About</button>
+        </li>
+        <li>
+          <button class="navbar__menu__item" data-link="#skills">Skills</button>
+        </li>
+        <li>
+          <button class="navbar__menu__item" data-link="#work">My Work</button>
+        </li>
+        <li>
+          <button class="navbar__menu__item" data-link="#contact">
+            Contact
+          </button>
+        </li>
+      </ul>
+      <button class="navbar__toggleBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     <div class="screen__fence"></div>
     <!-- Home -->
     <section id="home">
-        <div class="home__container">
-            <img src="./imgs/profile.jpg" alt="R-thinking's profile photo" class="home__avatar" />
-        <h1 class="home__title">Hello World,<br /> I'm R-thinking </h1>
-        <h2 class="home__description">A developer; dreaming of making righteous world through right thinking<h2>
-                <button class="home__contact" data-link="#contact">Contact Me</button>
-        </div>
-            <button class="home__link">
-                <i class="fas fa-arrow-up"></i>
-            </button>
+      <div class="home__container">
+        <!--  <img
+          src="./imgs/profile.jpg"
+          alt="R-thinking's profile photo"
+          class="home__avatar"
+        /> -->
+        <!-- <h1 class="home__title">Hello World,<br /> I'm R-thinking </h1> -->
+        <!-- <h2 class="home__description">A developer; dreaming of making righteous world through right thinking<h2> -->
+        <button class="home__contact" data-link="#contact">Contact Me</button>
+      </div>
+      <button class="home__link">
+        <i class="fas fa-arrow-up"></i>
+      </button>
     </section>
     <!-- About -->
     <section id="about" class="section">
-        <h1 class="about__title">About Me</h1>
-        <h2 class="about__description">
-            I want to be a person who participates in making world righteous as I said above.
-            Actually, I wasn't excellent in my studies at the university. Programming was quite difficult for me and I was even not interested in it.
-            However, as I had been learning by myself after the graduation, I started to understand how it is splendid and how many things I can do with it. So even though I don't have many things to handle yet,
-            I dare dream to make world more nice and lovely. I think that I just started learning a few things. But I will keep learnig and growing until I achieve my goal.
-        </h2>
-        <div class="about__majors">
-            <!-- Front-end -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="major__title">Front-end</div>
-                <div class="major__description">HTML, CSS, Javascript</div>
-            </div>
-            <!-- Interactive App -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="major__title">Interactive App</div>
-                <div class="major__description">Javascript, Typescript</div>
-            </div>
-            <!-- Framework -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-react"></i>
-                </div>
-                <div class="major__title">Framework</div>
-                <div class="major__description">React</div>
-            </div>
+      <h1 class="about__title">About Me</h1>
+      <h2 class="about__description">
+        안녕하세요 프론트엔드 개발자 지호준입니다. 저는 직장에서 뿐 아니라 어떤
+        분야든 맡겨진 임무에 최선을 다하는 사람입니다. 특별히 프론트엔드로 일할
+        때는 주어진 롤이 없더라도 팀의 의사 소통이 원활하게 오고 갈 수 있도록
+        많은 노력을 기울입니다. 백엔드와 기획자,디자이너 사이를 연결해줄 수 있는
+        다리가 프론트엔드라고 생각하기 때문입니다. 개발은 사람들이 필요한 것을
+        원하는대로 만들어갈 수 있는 멋진 일이라고 생각합니다. 그것을 위해
+        필요하지만 아직 모르는 것들을 늘 배우며 해결해 왔기 때문에 새로운 것을
+        배워 나가는 것에 익숙합니다. 함께 일하게 된다면 정말 즐겁게 일하며 멋진
+        일들을 같이 만들어가고 싶습니다.
+      </h2>
+      <div class="about__majors">
+        <!-- Front-end -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">Front-end</div>
+          <div class="major__description">
+            HTML, SCSS, Javascript,<br />
+            Typescript, Figma
+          </div>
         </div>
+        <!-- Interactive App -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="major__title">Primary API</div>
+          <div class="major__description">
+            Google Maps, Google Calendar, Youtube,<br />
+            TMDB, Notion, AWS-sdk...
+          </div>
+        </div>
+        <!-- Framework -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="major__title">Framework</div>
+          <div class="major__description">Vue.js, React.js</div>
+        </div>
+      </div>
     </section>
     <!-- Skills -->
     <section id="skills">
-        <div class="section__container">
-            <h1 class="skills__title">Skills</h1>
-            <h2 class="skills__description">
-                This is self-evaluation about skills of some tools and languages that I can handle.
-            </h2>
-            <div class="skillset">
-                <div class="skillset__left">
-                    <h3 class="skillset__title">Skills</h3>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>HTML</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>CSS</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Javascript</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Typescript</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:50%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>React</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:65%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>NodeJs</span>
-                            <span>30%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="bar__value" style="width:30%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skillset__right">
-                    <div class="tools">
-                        <h3 class="skillset__title">Tools</h3>
-                        <ul class="tools__list">
-                            <li><span>Visualstudio Code</span></li>
-                            <li><span>Visualstudio</span></li>
-                            <li><span>SourceTree</span></li>
-                        </ul>
-                    </div>
-                    <div class="etc">
-                        <h3 class="skillset__title">Etc</h3>
-                        <ul class="etc__list">
-                            <li><span>Git</span></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="section__container">
+        <h1 class="skills__title">Stack</h1>
+        <h2 class="skills__description">
+          주요 기술 스택에 대한 숙련도와 다뤄본 핵심적인 라이브러리 및
+          툴들입니다
+        </h2>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Achievement</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Markup(HTML & SCSS)</span>
+                <span>75%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 75%"></div>
+              </div>
             </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Javascript</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Typescript</span>
+                <span>65%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>React.js</span>
+                <span>75%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Vue.js</span>
+                <span>85%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>React-native, Electron</span>
+                <span>30%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="bar__value" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="libraries">
+              <h3 class="skillset__title">Libraries</h3>
+              <ul class="etc__list">
+                <li>
+                  <span class="sub__title">Javascript:</span>
+                  <span>
+                    axios, JQuery, tui-image-editor, tui-grid, tinyMCE,
+                    bootstrap, bootstrap-table, select2, bootbox, i18n
+                  </span>
+                </li>
+                <li>
+                  <span class="sub__title">React:</span>
+                  <span
+                    >react-query, recoil, zustand, styled-components,
+                    react-helmet, react-hook-form, framer-motion,
+                    @hello-pangea/dnd, apexcharts</span
+                  >
+                </li>
+                <li>
+                  <span class="sub__title">Vue:</span>
+                  <span
+                    >vue2, vue3, composition-api, vuex, pinia, vuelidate,
+                    v-viewer, bootstrap-vue, vue-i18n
+                  </span>
+                </li>
+                <li>
+                  <span class="sub__title">DevOps:</span>
+                  <span>dotenv, webpack, vite, bun, msw, @mswjs/data </span>
+                </li>
+              </ul>
+            </div>
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li>
+                  <span class="sub__title">개발 관련:</span>
+                  <span>
+                    Visualstudio Code, Sublime Merge,<br />
+                    Postman, DBeaver, Figma
+                  </span>
+                </li>
+                <li>
+                  <span class="sub__title">생산성: </span>
+                  <span>Github, Gitlab, Jira, Redmine, Slack, Notion</span>
+                </li>
+                <li><span></span></li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Work -->
     <section id="work" class="section">
-        <h1 class="work__title">Work</h1>
-        <h3 class="work__subtitle">Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn" data-filter="all">All <span class="category__count">6</span></button>
-            <button class="category__btn" data-filter="front-end">Front-end <span class="category__count">3</span></button>
-            <button class="category__btn" data-filter="interactive-app">Interactive App <span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="framework">Framework <span class="category__count">1</span></button>
-        </div>
-        <div class="work__projects">
-            <a href="https://github.com/R-thinking/Shopping-List" class="project" target="_blank" data-type="front-end">
-                <img class="project__img" src="imgs/projects/project-frontend1.png" alt="">
-                <div class="project__description">
-                    <h3>Shopping List</h3>
-                    <span>It's mobile UI for shopping list to add or remove Items.</span>
-                </div>
-            </a>
-            <a href="https://github.com/R-thinking/Youtube_Clone" class="project" target="_blank" data-type="front-end">
-                <img class="project__img" src="imgs/projects/project-frontend2.png" alt="">
-                <div class="project__description">
-                    <h3>Youtube Clone Site</h3>
-                    <span>Clone coding with html & CSS</span>
-                </div>
-            </a>
-            <a href="https://github.com/R-thinking/ShoppingJs" class="project" target="_blank" data-type="front-end">
-                <img class="project__img" src="imgs/projects/project-frontend3.png" alt="">
-                <div class="project__description">
-                    <h3>Shopping Mall Site</h3>
-                    <span>Shopping mall coding for javascript practice.
-                        <br />A navbar, menubar, animations, filtering function, etc are made with vanilla javascript.
-                    </span>
-                </div>
-            </a>
-            <!-- <a href="" class="project" target="_blank" data-type="front-end">
-                <img class="project__img" src="imgs/projects/project-virtual2.png" alt="">
-                <div class="project__description">
-                    <h3>Virtual project</h3>
-                    <span>It has no project yet</span>
-                </div>
-            </a> -->
-            <a href="https://github.com/R-thinking/Block-Chain-by-Typescript" class="project" target="_blank" data-type="interactive-app">
-                <img class="project__img" src="imgs/projects/project-interactive-app1.jpg" alt="">
-                <div class="project__description">
-                    <h3>Typescript BlockChain</h3>
-                    <span>This is a project to build a simple block-chain for practicing Typescript.</span>
-                </div>
-            </a>
-            <a href="https://github.com/R-thinking/CarrotAndRabbit" class="project" target="_blank" data-type="interactive-app">
-                <img class="project__img" src="imgs/projects/project-interactive-app2.png" alt="">
-                <div class="project__description">
-                    <h3>Javascript Game</h3>
-                    <span>It's a web game made with Vanilla JS.</span>
-                </div>
-            </a>
-            <a href="https://github.com/R-thinking/React-Movie-App" class="project" target="_blank" data-type="framework">
-                <img class="project__img" src="imgs/projects/project-framework1.jpg" alt="">
-                <div class="project__description">
-                    <h3>React Movie App</h3>
-                    <span>It's a movie application built by React.</span>
-                </div>
-            </a>
-            <!-- <a href="" class="project" target="_blank" data-type="framework">
+      <h1 class="work__title">Work Archieve</h1>
+      <h3 class="work__subtitle">Projects</h3>
+      <div class="work__categories">
+        <button class="category__btn" data-filter="all">
+          All <span class="category__count">7</span>
+        </button>
+        <button class="category__btn" data-filter="front-end">
+          Javascript <span class="category__count">2</span>
+        </button>
+        <button class="category__btn" data-filter="interactive-app">
+          Interactive Wep <span class="category__count">2</span>
+        </button>
+        <button class="category__btn" data-filter="framework">
+          Framework <span class="category__count">3</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <a
+          href="https://github.com/R-thinking/Niceflix"
+          class="project"
+          target="_blank"
+          data-type="framework"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-framework3.jpg"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Netflix Clone</h3>
+            <span>
+              React 연습용으로 만든 넷플릭스 클론입니다.<br />
+              TMDB api와 Youtube api를 이용해 만들어졌습니다.
+            </span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/Kanban-Board"
+          class="project"
+          target="_blank"
+          data-type="framework"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-framework2.jpg"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Kanban Board</h3>
+            <span
+              >드래그 앤 드랍으로 상태 변경할 수 있는
+              칸반보드입니다(React)</span
+            >
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/Coin-App"
+          class="project"
+          target="_blank"
+          data-type="framework"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-framework1.jpg"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Coin App</h3>
+            <span
+              >coincap api를 이용해 만든 코인 시세를 확인하는
+              사이트입니다(React)</span
+            >
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/CarrotAndRabbit"
+          class="project"
+          target="_blank"
+          data-type="interactive-app"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-interactive-app2.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Javascript Game</h3>
+            <span
+              >순수 자바스크립트를 이용해 만든 인터랙티브 웹(게임)입니다.</span
+            >
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/ShoppingJs"
+          class="project"
+          target="_blank"
+          data-type="front-end"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-frontend3.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Shopping Mall Site</h3>
+            <span
+              >자바스크립트 연습용으로 만든 쇼핑몰 사이트입니다.
+              <br />네비게이션바, 메뉴바, 여러가지 애니메이션, 필터링 등을
+              만들었습니다.
+            </span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/Youtube_Clone"
+          class="project"
+          target="_blank"
+          data-type="front-end"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-frontend2.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Youtube Clone Site</h3>
+            <span>마크업 연습용으로 만든 유튜브 클론입니다.(api x)</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/R-thinking/Block-Chain-by-Typescript"
+          class="project"
+          target="_blank"
+          data-type="interactive-app"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-interactive-app1.jpg"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Typescript BlockChain</h3>
+            <span
+              >타입스크립트를 연습하기 위해 만든 아주 단순한 버전의 블록체인
+              빌드입니다.</span
+            >
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/R-thinking/Shopping-List"
+          class="project"
+          target="_blank"
+          data-type="front-end"
+        >
+          <img
+            class="project__img"
+            src="imgs/projects/project-frontend1.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Shopping List</h3>
+            <span>단순한 장보기 to-do list입니다.</span>
+          </div>
+        </a>
+        <!-- <a href="" class="project" target="_blank" data-type="framework">
                 <img class="project__img" src="imgs/projects/project-virtual6.png" alt="">
                 <div class="project__description">
                     <h3>Virtual project</h3>
                     <span>It has no project yet</span>
                 </div>
             </a> -->
-        </div>
+      </div>
     </section>
     <!-- Contact -->
     <section id="contact">
-        <div class="section__container">
-            <h1 class="contact__title">Let's talk</h1>
-            <h3 class="contact__email">making.r.w@gmail.com</h3>
-            <div class="contact__links">
-                <a href="https://github.com/R-thinking" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/hojun-ji-403494214/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <p class="contact__copyright">R-thinking - All rights reserved</p>
+      <div class="section__container">
+        <h1 class="contact__title">Let's talk</h1>
+        <h3 class="contact__email">making.r.w@gmail.com</h3>
+        <div class="contact__links">
+          <a href="https://github.com/R-thinking" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/hojun-ji-403494214/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
+        <p class="contact__copyright">R-thinking - All rights reserved</p>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
